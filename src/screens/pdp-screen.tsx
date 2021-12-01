@@ -15,16 +15,16 @@ const GET_PRODUCT_URL = 'https://nodejs-flutter.herokuapp.com/api/products/';
 
 const PdpScreen = () => {
   const [product, setProduct] = useState<Product | null>(null);
-  const [isLoading, setIsloading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const {pid} = useRoute<RouteProps>().params;
 
   useEffect(() => {
-    setIsloading(true);
+    setIsLoading(true);
     fetch(`${GET_PRODUCT_URL}${pid}`)
       .then(res => res.json())
       .then(res => setProduct(res))
       .catch(() => {})
-      .finally(() => setIsloading(false));
+      .finally(() => setIsLoading(false));
   }, [pid]);
 
   if (isLoading) {

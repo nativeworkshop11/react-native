@@ -55,3 +55,19 @@ export interface Product {
   variations?: [];
   variationAttributes?: VariationAttribute[];
 }
+
+export type ProductHit = {
+  productId: string;
+  productName: string;
+  image: {
+    alt: string;
+    url: string;
+    title: string;
+  };
+  prices: {
+    list: {
+      value: number;
+      formatted: string;
+    };
+  };
+};
