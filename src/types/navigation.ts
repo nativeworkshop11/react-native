@@ -7,5 +7,5 @@ export enum HomeStackScreenNames {
 export type HomeStackParamsList = {
   [HomeStackScreenNames.HOME]: undefined;
   [HomeStackScreenNames.PLP]: {keyword: string} | undefined;
-  [HomeStackScreenNames.PDP]: {productId: string} | undefined;
+  [HomeStackScreenNames.PDP]: {pid: string};
 };
