@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   ListRenderItemInfo,
 } from 'react-native';
+import Separator from '../../components/separator';
 import {HomeStackScreenNames} from '../../types/navigation';
 import {ProductHit} from '../../types/products';
 
@@ -33,7 +34,7 @@ const ProductList = ({products}: {products: ProductHit[]}) => {
       renderItem={renderItem}
       numColumns={2}
       keyExtractor={(item: ProductHit) => item?.productId}
-      ItemSeparatorComponent={() => <Text style={styles.separator} />}
+      ItemSeparatorComponent={() => <Separator />}
       showsVerticalScrollIndicator={false}
     />
   );
